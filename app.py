@@ -126,7 +126,7 @@ if page_selected == "Inventario":
     else:
         st.dataframe(db, use_container_width=True, hide_index=True)
 
-    with st.expander('Editar datos de inventario'):
+    with st.expander('Editar datos de inventario', expanded=False):
         with st.form('inventario', border=False):
             # db = pd.read_csv('test_db.csv', dtype={'Fecha': str, 'Proyecto': str, 'Código': str, 'Alto': int, 'Ancho': int, 'Largo': int})
             db = conn.read(worksheet="test_db", ttl=0, dtype={'Fecha': str, 'Proyecto': str, 'Código': str})
